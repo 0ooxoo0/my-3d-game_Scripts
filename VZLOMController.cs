@@ -24,7 +24,6 @@ public class VZLOMController : MonoBehaviour
     public Image trueeee;
     public bool active;
     public float tm = 1;
-    // Start is called before the first frame update
     void Start()
     {
         if(LevelSlojnosti == 0)
@@ -36,8 +35,6 @@ public class VZLOMController : MonoBehaviour
         nachalo = Random.Range(-135, 135 - ((NachalniyGradusVzloma / 100) * (100 + LevelSlojnosti)));
         konec = nachalo + ((NachalniyGradusVzloma / 100) * (100 + LevelSlojnosti));
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKey(KeyCode.Escape))
@@ -54,8 +51,6 @@ public class VZLOMController : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            
-
             Quaternion rotarionX = Quaternion.AngleAxis(mouseX, Vector3.forward);
             transform.rotation = originalRotation * rotarionX;
             if(GradusZamka > -90 && mouseX > nachalo - 10 && mouseX < konec + 10)
