@@ -78,7 +78,6 @@ namespace Using
             }
             else
             {
-                    //target = targetEnemy.ThistTransformTarget;
                     target = player.transform.position;
                     y = transform.rotation.y;
                     w = transform.rotation.w;
@@ -95,7 +94,6 @@ namespace Using
                         myAnimator.SetBool("Attak", false);
                         myAnimator.SetBool("Run", false);
                         myAnimator.SetBool("Idle", true);
-                        //ButtonAnim.SetBool("Destoy", true);
                     }
 
                     if (distanceParking < 0.5)
@@ -133,7 +131,6 @@ namespace Using
                     {
                         transform.LookAt(target);
                         myAgent.enabled = false;
-                        //myAgent.SetDestination(target);
                         myAnimator.SetBool("Idle", false);
                         myAnimator.SetBool("Run", false);
                         myAnimator.SetBool("Attak", true);
@@ -152,7 +149,6 @@ namespace Using
                 y = transform.rotation.y;
                 w = transform.rotation.w;
                 transform.rotation = new Quaternion(0, y, 0, w);
-                //Destroy(tt);
             }
             else
             {
@@ -169,7 +165,6 @@ namespace Using
             {
                 Live -= LevelUp.Damage;
                 RedImage.fillAmount = ((Live * 100) / MaxLife)/100;
-                //myAnimator.SetTrigger("TakeDamage");
                 GameObject blood = Instantiate(bloodPrefab, bloodPos.position, Quaternion.identity);
                 blood.transform.LookAt(target);
                 Destroy(blood, 0.2f);
@@ -185,7 +180,7 @@ namespace Using
                         Debug.Log(item.Length);
                         int rand = Random.Range(0, item.Length);
                         GameObject itemObject = Instantiate(item[rand].itemPrefab, this.transform.position, Quaternion.identity);
-                        if (item[rand].itemType == ItemType.ÀrmorRuns)
+                        if (item[rand].itemType == ItemType.Ã€rmorRuns)
                         {
                             itemObject.GetComponent<Item>().amount = 1;
                         }
