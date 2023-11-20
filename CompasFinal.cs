@@ -35,7 +35,6 @@ public class CompasFinal : MonoBehaviour
 
     public void AddQuestMarker (QuestMarker marker)
     {
-        //Debug.Log(marker.name);
         GameObject newMarker = Instantiate(iconPrefab, CompassImage.transform);
         marker.image = newMarker.GetComponent<Image>();
         marker.image.sprite = marker.icon;
