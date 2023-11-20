@@ -12,7 +12,6 @@ public class CustomCharacterController : MonoBehaviour
     public float runningSpeed = 6f;
     public float currentSpeed;
     private float animationInterpolation = 1f;
-    // Start is called before the first frame update
     void Start()
     {
         // Прекрепляем курсор к середине экрана
@@ -69,7 +68,6 @@ public class CustomCharacterController : MonoBehaviour
             anim.SetTrigger("Jump");
         }
     }
-    // Update is called once per frame
     void FixedUpdate()
     {
         // Здесь мы задаем движение персонажа в зависимости от направления в которое смотрит камера
