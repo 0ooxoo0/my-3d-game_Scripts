@@ -8,14 +8,11 @@ public class Spider : MonoBehaviour
     public List<Transform> targets;
     NavMeshAgent agent;
     public int i;
-    // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(targets[i].position);
     }
-
-    // Update is called once per frame
     void Update()
     {
 
