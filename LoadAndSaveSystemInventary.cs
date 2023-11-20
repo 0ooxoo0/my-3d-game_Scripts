@@ -15,7 +15,6 @@ public class LoadAndSaveSystemInventary : MonoBehaviour
     public InventoryManager IM;
     bool save = false;
     bool load = true;
-    // Start is called before the first frame update
     void Start()
     {
 
@@ -32,7 +31,6 @@ public class LoadAndSaveSystemInventary : MonoBehaviour
 
             for (int i = 0; i < CaildNumberSlots; i++)
             {
-                //Debug.Log("Load");
                 if (File.Exists(Application.persistentDataPath + "/InventaryItem" + i + ("" + 0 + PlayerPrefs.GetInt("SaveBlock")) + Application.version + ".txt"))
                 {
                     if (File.ReadAllText(Application.persistentDataPath + "/InventaryItem" + i + ("" + 0 + PlayerPrefs.GetInt("SaveBlock")) + Application.version + ".txt") != "")
@@ -55,7 +53,6 @@ public class LoadAndSaveSystemInventary : MonoBehaviour
             }
             for (int i = 0; i < CaildNumberInventarySlots; i++)
             {
-                //Debug.Log("Load1");
                 if (File.Exists(Application.persistentDataPath + "/InventaryItemBronyia" + i + ("" + 0 + PlayerPrefs.GetInt("SaveBlock")) + Application.version + ".txt"))
                 {
                     if (File.ReadAllText(Application.persistentDataPath + "/InventaryItemBronyia" + i + ("" + 0 + PlayerPrefs.GetInt("SaveBlock")) + Application.version + ".txt") != "")
@@ -108,7 +105,6 @@ public class LoadAndSaveSystemInventary : MonoBehaviour
             }
             for (int i = 0; i < CaildNumberInventarySlots; i++)
             {
-                //Debug.Log("Save1 - " + i + " || " +InventarySlots.transform.GetChild(i).GetComponent<InventorySlot>().item + " != null");
                 if (InventarySlots.transform.GetChild(i).GetComponent<InventorySlot>().item != null)
                 {
                     if (item1.name == InventarySlots.transform.GetChild(i).GetComponent<InventorySlot>().item.name && item1 != null)
