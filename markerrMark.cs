@@ -12,7 +12,6 @@ public class markerrMark : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public GameObject LuchPrafab;
     public GameObject CF;
     public GameObject Dialoggggg;
-    // Start is called before the first frame update
     void Start()
     {
         Dialog = GameObject.Find("Dialog");
@@ -23,8 +22,6 @@ public class markerrMark : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         Luch.transform.localPosition = new Vector3(transform.localPosition.x * 1.1f, 0, transform.localPosition.y * 1.1f);
         Luch.GetComponent<TochkkaNaKarte>().image = gameObject;
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(Luch.GetComponent<QuestMarker>().marker == null || Luch.GetComponent<QuestMarker>().image == null)
