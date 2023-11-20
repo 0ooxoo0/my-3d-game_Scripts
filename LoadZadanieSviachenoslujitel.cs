@@ -13,13 +13,11 @@ public class LoadZadanieSviachenoslujitel : MonoBehaviour
     public ScrollViewAdapter Content;
     public QuestMarker RuiniStarogoGoroda;
     public QuestMarker RuiniSviatilishia;
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (File.Exists(Application.persistentDataPath + "/DialogSviachennoslygitel1" + ("" + 0 + PlayerPrefs.GetInt("SaveBlock")) + Application.version + ".txt") && load1 == false)
@@ -28,8 +26,6 @@ public class LoadZadanieSviachenoslujitel : MonoBehaviour
             { }
             else
             {
-                //CF.DeleteQuestMarker(SviachennoSlujitel);
-                //SviachennoSlujitel.DeleteMarker();
                 CF.AddQuestMarker(Vicing);
                 Content.UpdateItems(3);
             }
