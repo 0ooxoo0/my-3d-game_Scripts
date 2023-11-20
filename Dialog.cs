@@ -14,13 +14,10 @@ public class Dialog : MonoBehaviour
     public string NameSave2;
     public int active = 1;
     public int active1 = 1;
-    // Start is called before the first frame update
     void Start()
     {
         jitel = this.GetComponent<Jitel>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         text.text = ImiaCheloveka;
