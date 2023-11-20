@@ -19,13 +19,11 @@ public class Ojidanie : MonoBehaviour
     public LifeBarScript life;
     public GameObject panel;
     public RaymarchedClouds oblako;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (OjidaemPrefab.active == true)
