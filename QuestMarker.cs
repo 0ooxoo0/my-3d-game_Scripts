@@ -30,10 +30,6 @@ public class QuestMarker : MonoBehaviour
     float time = 0.5f;
     private void Start()
     {
-        //a = image.color.a;
-        //b = image.color.b;
-        //g = image.color.g;
-        //r = image.color.r; 
         Player = GameObject.Find("Girl");
     }
     void Update()
@@ -130,8 +126,6 @@ public class QuestMarker : MonoBehaviour
     }
     public void DeleteMarker()
     {
-        //image.enabled = false;
-        //image = null;
         Destroy(marker);
         Destroy(GameObject.Find(NameDelite)); 
         if (tochkaNaKarte == false && mark != null)
