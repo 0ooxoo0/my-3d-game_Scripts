@@ -12,7 +12,6 @@ public class MenuCharacterController : MonoBehaviour
     public Camera cam;
     public bool Tur;
 
-    // Start is called before the first frame update
     void Start()
     {
         originalRotation = transform.rotation;
@@ -28,7 +27,6 @@ public class MenuCharacterController : MonoBehaviour
     {
         transform.localPosition = new Vector3(0, 0.5f, 0);
     }
-    // Update is called once per frame
     void FixedUpdate()
     {
         transform.localPosition = new Vector3(0, 0.5f, 0);
