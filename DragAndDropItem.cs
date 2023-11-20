@@ -17,7 +17,6 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     private void Start()
     {
-        //ПОСТАВЬТЕ ТЭГ "PLAYER" НА ОБЪЕКТЕ ПЕРСОНАЖА!
         player = GameObject.FindGameObjectWithTag("Player").transform;
         // Находим скрипт InventorySlot в слоте в иерархии
         oldSlot = transform.GetComponentInParent<InventorySlot>();
@@ -41,7 +40,6 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             if (oldSlot.isEmpty)
                 return;
 
-            //Usinggg.SetActive(true);
             //Делаем картинку прозрачнее
             GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0.75f);
             // Делаем так чтобы нажатия мышкой не игнорировали эту картинку
@@ -58,7 +56,6 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             if (oldSlot.isEmpty)
                 return;
 
-            //Usinggg.SetActive(false);
             // Делаем картинку опять не прозрачной
             GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1f);
             // И чтобы мышка опять могла ее засечь
@@ -131,13 +128,11 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         if (oldSlot.isEmpty == false)
         {
             newSlot.SetIcon(oldSlot.iconGO.GetComponent<Image>().sprite);
-            //newSlot.itemAmountText.text = oldSlot.amount.ToString();
         }
         else
         {
             newSlot.iconGO.GetComponent<Image>().color = new Color(1, 1, 1, 0);
             newSlot.iconGO.GetComponent<Image>().sprite = null;
-            //newSlot.itemAmountText.text = "";
         }
         
         newSlot.isEmpty = oldSlot.isEmpty;
@@ -149,13 +144,11 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         {
             oldSlot.SetIcon(iconGO.GetComponent<Image>().sprite);
 
-            //oldSlot.itemAmountText.text = amount.ToString();
         }
         else
         {
             oldSlot.iconGO.GetComponent<Image>().color = new Color(1, 1, 1, 0);
             oldSlot.iconGO.GetComponent<Image>().sprite = null;
-            //oldSlot.itemAmountText.text = "";
         }
         
         oldSlot.isEmpty = isEmpty;
