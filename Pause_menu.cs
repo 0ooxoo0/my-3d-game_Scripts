@@ -14,7 +14,6 @@ using UnityStandardAssets.ImageEffects;
 
 public class Pause_menu : MonoBehaviour
 {
-    //public GameObject camera;
     public GameObject camm;
     public TextMeshProUGUI Points;
     public GameObject Button;
@@ -49,10 +48,6 @@ public class Pause_menu : MonoBehaviour
 
     void Update()
     {
-            //if(act == true)
-            //{
-            //    active = false;
-            //}
         if (FPS.active != FPSToggle.isOn)
         {
             FPS.SetActive(FPSToggle.isOn);
@@ -178,28 +173,6 @@ public class Pause_menu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneNumber);
     }
-
-    //public void SetVolumeButton(float volume)
-    //{
-    //    audioMixerButton.SetFloat("Кнопки", Mathf.Log10(volume) * 20);
-    //}    
-    //public void SetVolumeFith(float volume)
-    //{
-    //    audioMixerFiht.SetFloat("Удары", Mathf.Log10(volume) * 20);
-    //}    
-    //public void SetVolumeMove(float volume)
-    //{
-    //    audioMixerMove.SetFloat("Шаги", Mathf.Log10(volume) * 20);
-    //}    
-    //public void SetVolumeOcrujenie(float volume)
-    //{
-    //    audioMixerOcrujenie.SetFloat("Окружение", Mathf.Log10(volume) * 20);
-    //}
-    //public void SetQuality(int qualityIndex)
-    //{
-    //    QualitySettings.SetQualityLevel(qualityIndex);
-    //}
-
     public void Sound()
     {
         AudioListener.pause = !AudioListener.pause;
@@ -212,7 +185,6 @@ public class Pause_menu : MonoBehaviour
         Cursor.visible = false;
         active = false;
         time = 0.1f;
-        //FPSToggle.isOn = FPS.active;
     }
 
     public void QualityLoad(TMP_Dropdown DD)
